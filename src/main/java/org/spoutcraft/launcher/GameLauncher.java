@@ -54,7 +54,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 	public static final int SUCCESSFUL_LAUNCH = 1;
 
 	public GameLauncher() {
-		super("Spoutcraft");
+		super("Ember");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.addWindowListener(this);
@@ -90,7 +90,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 			return;
 		}
 		if (applet == null) {
-			String message = "Failed to launch Spoutcraft!";
+			String message = "Failed to launch Ember!";
 			this.setVisible(false);
 			JOptionPane.showMessageDialog(getParent(), message);
 			this.dispose();
@@ -163,7 +163,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 				Thread.sleep(1000);
 			} catch (InterruptedException e1) { }
 		}
-		System.out.println("Exiting Spoutcraft");
+		System.out.println("Exiting Ember");
 		this.dispose();
 		System.exit(0);
 	}

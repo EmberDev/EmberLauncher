@@ -102,7 +102,7 @@ public class SpoutcraftLauncher {
 
 		int launcherBuild = parseInt(getLauncherBuild(), -1);
 		logger.info("------------------------------------------");
-		logger.info("Spoutcraft Launcher is starting....");
+		logger.info("Ember Launcher is starting....");
 		logger.info("Launcher Build: " + launcherBuild);
 
 		params.logParameters(logger);
@@ -203,10 +203,10 @@ public class SpoutcraftLauncher {
 
 	private static void checkInternet() {
 		if (!pingURL("http://www.google.com")) {
-			JOptionPane.showMessageDialog(null, "You must have an internet connection to use Spoutcraft", "No Internet Connection!", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "You must have an internet connection to use Ember", "No Internet Connection!", JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
-		} else if (!pingURL("http://get.spout.org")) {
-			JOptionPane.showMessageDialog(null, "The Spout webservers are currently not responding. Try again later.", "Spout Servers Down", JOptionPane.ERROR_MESSAGE);
+		} else if (!pingURL("http://travis-ci.org/")) {
+			JOptionPane.showMessageDialog(null, "The Travis webservers are currently not responding. Try again later.", "Travis Servers Down", JOptionPane.ERROR_MESSAGE);
 			System.exit(0);
 		}
 	}
@@ -256,7 +256,7 @@ public class SpoutcraftLauncher {
 		temp.delete();
 		temp = new File(Utils.getWorkingDirectory(), "temp.exe");
 		temp.delete();
-		temp = new File(Utils.getWorkingDirectory(), "Spoutcraft-Launcher.jar");
+		temp = new File(Utils.getWorkingDirectory(), "Ember-Launcher.jar");
 		temp.delete();
 		if (!Main.isOldLauncher()) {
 			temp = new File(Utils.getWorkingDirectory(), "launcherVersion");
@@ -266,7 +266,7 @@ public class SpoutcraftLauncher {
 		temp.delete();
 		temp = new File(Utils.getWorkingDirectory(), "config/libraries.yml");
 		temp.delete();
-		temp = new File(Utils.getWorkingDirectory(), "config/spoutcraft.yml");
+		temp = new File(Utils.getWorkingDirectory(), "config/ember.yml");
 		temp.delete();
 		temp = new File(Utils.getWorkingDirectory(), "config/minecraft.yml");
 		temp.delete();
@@ -276,7 +276,7 @@ public class SpoutcraftLauncher {
 		OperatingSystem os = OperatingSystem.getOS();
 		if (os.isMac()) {
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
-			System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Spoutcraft");
+			System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Ember");
 		}
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -299,7 +299,7 @@ public class SpoutcraftLauncher {
 		if (!logDirectory.exists()) {
 			logDirectory.mkdir();
 		}
-		File logs = new File(logDirectory, "spoutcraft_%D.log");
+		File logs = new File(logDirectory, "ember_%D.log");
 		RotatingFileHandler fileHandler = new RotatingFileHandler(logs.getPath());
 
 		fileHandler.setFormatter(new DateOutputFormatter(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss")));

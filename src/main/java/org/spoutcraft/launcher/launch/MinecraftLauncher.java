@@ -41,7 +41,7 @@ public class MinecraftLauncher {
 		if (loader == null) {
 			File mcBinFolder = new File(Utils.getWorkingDirectory(), "bin");
 
-			File spoutcraftJar = new File(mcBinFolder, "spoutcraft.jar");
+			File spoutcraftJar = new File(mcBinFolder, "ember.jar");
 			File minecraftJar = new File(mcBinFolder, "minecraft.jar");
 			File jinputJar = new File(mcBinFolder, "jinput.jar");
 			File lwglJar = new File(mcBinFolder, "lwjgl.jar");

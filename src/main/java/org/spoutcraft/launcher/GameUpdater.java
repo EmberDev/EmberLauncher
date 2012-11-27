@@ -37,7 +37,7 @@ import org.spoutcraft.launcher.util.DownloadListener;
 public final class GameUpdater extends SpoutcraftDirectories{
 	public static final String baseURL = "http://s3.amazonaws.com/MinecraftDownload/";
 	public static final String latestLWJGLURL = "http://get.spout.org/lib/lwjgl/";
-	public static final String spoutcraftMirrors = "http://get.spout.org/mirrors.yml";
+	public static final String spoutcraftMirrors = ""; //FIXIT
 
 	// Minecraft Updating Arguments
 	private String user = "Player";

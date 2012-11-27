@@ -82,7 +82,7 @@ public abstract class LoginFrame extends JFrame implements DownloadListener {
 	public LoginFrame() {
 		readSavedUsernames();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Spoutcraft");
+		setTitle("Ember");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(spoutcraftIcon));
 	}
 
@@ -339,7 +339,7 @@ public abstract class LoginFrame extends JFrame implements DownloadListener {
 				break;
 
 			case PERMISSION_DENIED:
-				JOptionPane.showMessageDialog(getParent(), "Ensure Spoutcraft is whitelisted with any antivirus applications.", "Permission Denied!", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(getParent(), "Ensure Ember is whitelisted with any antivirus applications.", "Permission Denied!", JOptionPane.WARNING_MESSAGE);
 				enableForm();
 				break;
 		}
@@ -368,7 +368,7 @@ public abstract class LoginFrame extends JFrame implements DownloadListener {
 			style.append("font-size:" + arial12.getSize() + "pt;");
 
 			JEditorPane ep = new JEditorPane("text/html", "<html><body style=\"" + style + "\">"
-					+ "Spoutcraft requires Java 6 or greater to run, Download"
+					+ "Ember requires Java 6 or greater to run, Download"
 					+ "<br>java updates from http://spout.in/javaupdates</body></html>");
 			
 			ep.setEditable(false);

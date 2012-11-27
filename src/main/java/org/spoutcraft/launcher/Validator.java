@@ -66,12 +66,12 @@ public class Validator{
 			return true;
 		}
 
-		File spoutcraft = new File(Launcher.getGameUpdater().getBinDir(), "spoutcraft.jar");
+		File spoutcraft = new File(Launcher.getGameUpdater().getBinDir(), "ember.jar");
 		if (spoutcraft.exists()) {
-			if (!compareSpoutcraftMD5s(build, spoutcraft)) {
-				err("Invalid spoutcraft.jar");
-				return spoutcraft.delete();
-			}
+			//if (!compareSpoutcraftMD5s(build, spoutcraft)) {
+			//	err("Invalid spoutcraft.jar");
+			//	return spoutcraft.delete();
+			//}
 		} else {
 			err("There is no spoutcraft.jar");
 			return true;

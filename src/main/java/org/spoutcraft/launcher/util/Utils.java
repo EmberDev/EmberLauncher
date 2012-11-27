@@ -66,7 +66,7 @@ public class Utils {
 
 	public static File getWorkingDirectory() {
 		if (workDir == null) {
-			workDir = getWorkingDirectory("spoutcraft");
+			workDir = getWorkingDirectory("ember");
 		}
 		return workDir;
 	}
@@ -85,7 +85,7 @@ public class Utils {
 
 	public static File getWorkingDirectory(String applicationName) {
 		if (getStartupParameters() != null && getStartupParameters().isPortable()) {
-			return new File("spoutcraft");
+			return new File("ember");
 		}
 
 		String userHome = System.getProperty("user.home", ".");
