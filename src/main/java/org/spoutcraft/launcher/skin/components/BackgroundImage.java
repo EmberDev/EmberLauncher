@@ -72,14 +72,7 @@ public class BackgroundImage extends JLabel {
 		InputStream stream = null;
 		BufferedImage image;
 		try {
-			try {
-				stream = new FileInputStream(images.get((new Random()).nextInt(images.size())));
-			} catch (Exception io) {
-				if (images.size() > 0) {
-					io.printStackTrace();
-				}
-				stream = ResourceUtils.getResourceAsStream("/org/spoutcraft/launcher/resources/background.jpg");
-			}
+			stream = ResourceUtils.getResourceAsStream("/org/spoutcraft/launcher/resources/background.jpg");
 			image = ImageIO.read(stream);
 			image = BlurUtils.applyGaussianBlur(image, 10, 1, true);
 			return image;
