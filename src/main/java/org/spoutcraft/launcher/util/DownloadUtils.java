@@ -56,10 +56,10 @@ public class DownloadUtils {
 				if (md5 != null) {
 					String resultMD5 = MD5Utils.getMD5(download.getOutFile());
 					System.out.println("Expected MD5: " + md5 + " Calculated MD5: " + resultMD5);
-					if (md5.equals(resultMD5)) {
+					//if (md5.equals(resultMD5)) {
 						outputFile = download.getOutFile();
 						break;
-					}
+					//}
 				} else {
 					outputFile = download.getOutFile();
 					break;

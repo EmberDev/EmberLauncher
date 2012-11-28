@@ -42,6 +42,10 @@ import org.codehaus.jackson.map.ObjectMapper;
 public final class Versions {
 	private static List<String> versions = null;
 	public static synchronized List<String> getMinecraftVersions() {
+		Versions.versions = new ArrayList<String>();
+		versions.add(0, "1.4.5");
+		return versions;
+	/*
 		if (versions == null) {
 			InputStream stream = null;
 			try {
@@ -70,6 +74,7 @@ public final class Versions {
 			versions.add(0, "1.4.5");
 		}
 		return versions;
+	*/
 	}
 
 	public static synchronized String getLatestMinecraftVersion() {

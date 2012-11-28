@@ -104,7 +104,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 		minecraft.addParameter("username", user);
 		minecraft.addParameter("sessionid", session);
 		minecraft.addParameter("downloadticket", downloadTicket);
-		minecraft.addParameter("spoutcraftlauncher", "true");
+		minecraft.addParameter("emberlauncher", "true");
 		minecraft.addParameter("portable", params.isPortable() + "");
 		if (params.getServer() != null) {
 			minecraft.addParameter("server", params.getServer());

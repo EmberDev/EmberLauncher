@@ -156,7 +156,7 @@ public class Start {
 	}
 
 	private static void migrateFolders() {
-		File brokenSpoutcraftDir = Utils.getWorkingDirectory("Spoutcraft");
+		File brokenSpoutcraftDir = Utils.getWorkingDirectory("Ember");
 		if (brokenSpoutcraftDir.exists()) {
 			File correctSpoutcraftDir = Utils.getWorkingDirectory();
 			OperatingSystem os = OperatingSystem.getOS();

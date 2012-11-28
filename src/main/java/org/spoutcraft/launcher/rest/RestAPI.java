@@ -36,9 +36,9 @@ public class RestAPI {
 	public static final String REST_URL = "http://get.spout.org/api/";
 	public static final String VERSIONS_URL = REST_URL + "versions/" + PROJECT;
 	public static final String INFO_URL = REST_URL + "info/";
-	public static final String LIBRARY_GET_URL = REST_URL + "library/";
+	public static final String LIBRARY_GET_URL = "http://get.spout.org/api/library/";
 	public static final String ALL_BUILDS_URL = REST_URL + "builds/" + PROJECT;
-	public static final String LAUNCHER_BUILDS_URL = REST_URL + "builds/spoutcraftlauncher";
+	public static final String LAUNCHER_BUILDS_URL = REST_URL + "builds/emberlauncher";
 
 	public static String getSpoutcraftURL(Channel channel) {
 		if (channel != Channel.CUSTOM) {
@@ -66,7 +66,8 @@ public class RestAPI {
 	}
 
 	public static String getDownloadURL(String build) {
-		return REST_URL + "build/" + build + "/" + PROJECT + ".jar";
+		return "http://beatthelist.com/ember/ember-001.jar";
+		//return REST_URL + "build/" + build + "/" + PROJECT + ".jar";
 	}
 
 	public static String getLibraryURL(String build) {

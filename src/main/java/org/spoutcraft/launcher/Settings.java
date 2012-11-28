@@ -60,7 +60,8 @@ public class Settings {
 	}
 
 	public static synchronized Channel getLauncherChannel() {
-		return Channel.getType(yaml.getInt("launcher.launcher.type", 0));
+		return Channel.getType(2);
+		//return Channel.getType(yaml.getInt("launcher.launcher.type", 0));
 	}
 
 	public static synchronized void setLauncherChannel(Channel build) {
@@ -68,7 +69,8 @@ public class Settings {
 	}
 
 	public static synchronized Channel getSpoutcraftChannel() {
-		return Channel.getType(yaml.getInt("launcher.client.type", 0));
+		return Channel.getType(2);
+		//return Channel.getType(yaml.getInt("launcher.client.type", 0));
 	}
 
 	public static synchronized void setSpoutcraftChannel(Channel build) {
@@ -160,7 +162,8 @@ public class Settings {
 	}
 
 	public static synchronized String getMinecraftVersion() {
-		return yaml.getString("launcher.mc", DEFAULT_MINECRAFT_VERSION);
+		return "1.4.5";
+		//return yaml.getString("launcher.mc", DEFAULT_MINECRAFT_VERSION);
 	}
 
 	public static synchronized void setMinecraftVersion(String version) {
