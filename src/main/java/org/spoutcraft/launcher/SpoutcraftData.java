@@ -277,6 +277,9 @@ public final class SpoutcraftData {
 					i.remove();
 				}
 			}
+			
+			libs.clear(); //zzhack - tagged by theory
+			
 			return libs;
 		} catch (IOException e) {
 			throw new RestfulAPIException("Error accessing URL [" + url + "]", e);

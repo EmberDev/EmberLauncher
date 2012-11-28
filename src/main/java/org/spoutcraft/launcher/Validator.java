@@ -73,7 +73,7 @@ public class Validator{
 			//	return spoutcraft.delete();
 			//}
 		} else {
-			err("There is no spoutcraft.jar");
+			err("There is no ember.jar");
 			return true;
 		}
 
@@ -109,7 +109,8 @@ public class Validator{
 			err("There is no lwjgl_util.jar");
 			return true;
 		}
-
+		//zzhack - tagged by theory
+		/*
 		File libDir = new File(Launcher.getGameUpdater().getBinDir(), "lib");
 		List<Library> libraries = build.getLibraries();
 		for (Library lib : libraries) {
@@ -126,6 +127,7 @@ public class Validator{
 				return true;
 			}
 		}
+		*/
 		passed = true;
 		return true;
 	}
